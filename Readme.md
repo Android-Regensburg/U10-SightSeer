@@ -42,7 +42,7 @@ Das Ziel dieser Aufgabe ist die Implementierung einer App zur Navigation am Camp
 
 ## Ausgangslage
 * Die Layouts für die `LocationListActivity`, die `NavigationActivity` sowie das benötigte `location_list_item` für den Adapter sind bereits vollständig
-* Die `Destination`-Klasse repräsentiert die Kartendaten zu bestimmten "Sehenswürdigkeiten". Die `NavigationDetail`-Klasse dürfen Sie dagegen als eine Art Wegbeschreibung von einer Location zu einem bestimmten Ziel verstehen
+* Die `Destination`-Klasse repräsentiert die Kartendaten zu bestimmten Orten auf dem Campus. Die `NavigationDetail`-Klasse dürfen Sie dagegen als eine Art Wegbeschreibung von einer Location zu einem bestimmten Ziel verstehen
 * Alle benötigten Klassen sind bereits erstellt. Machen Sie sich mit der Struktur vertraut und vervollständigen Sie die `NavigationController`-Klasse mit den notwendigen Methoden. Erstellen Sie Instanzvariablen wenn nötig. Integrieren Sie diesen zum Abschluss in die Activity
 
 ## Vorgehen
