@@ -37,7 +37,7 @@ Das Ziel dieser Aufgabe ist die Implementierung einer App zur Navigation am Camp
 * Verwenden Sie Für die Abfrage und Verarbeitung der Positionsdaten die Vorlesung (VL9), sowie die Android-Dokumentation:
   * `Location`: https://developer.android.com/reference/android/location/Location
   * `LocationManager`: https://developer.android.com/reference/android/location/LocationManager
-* Sie können die Location-Funktion der erweiterten Funktionen des Android Emulators verwenden, um die App von zu Hause zu testen. 
+* Sie können die Location-Funktion der erweiterten Funktionen des Android Emulators verwenden, um die App von zu Hause zu testen.
 
 ## Ausgangslage
 * Die Layouts für die `LocationListActivity`, die `NavigationActivity` sowie das benötigte `location_list_item` für den Adapter sind bereits vorhanden und können so übernommen werden
@@ -48,7 +48,7 @@ Das Ziel dieser Aufgabe ist die Implementierung einer App zur Navigation am Camp
 ### Anfragen der Berechtigungen 
 Stellen Sie sicher dass die App über die notwendigen Berechtigungen verfügt. SightSeer muss in der Lage sein die `FINE_LOCATION` des Geräts abzufragen. Anders als beim ebenfalls erforderlichen Internetzugriff handelt es sich dabei um eine sensitivere Permission. Diese müssen zum Startzeitpunkt der Anwendung geprüft und angefragt werden.
 
-Es wird empfohlen die Berechtigungen zusätzlich immer dann zu prüfen, wenn die ensprechende Funktion verwendet wird (auch im `NavigationController`).
+**Hinweis:** Es wird empfohlen die Berechtigungen zusätzlich immer dann zu prüfen, wenn die ensprechende Funktion verwendet wird (auch im `NavigationController`). Dazu kann die `ActivityCompat`-Klasse verwendet werden. Prüfen Sie zusätzlich zur `FINE_LOCATION` auch die `COARSE_LOCATION`.
 
 Starten Sie die App an dieser Stelle auf dem Emulator, um zu testen, ob das Popup für die Berechtigung, wie auf dem Screenshot sichtbar, korrekt angezeigt wird.
 
@@ -71,7 +71,7 @@ Um den Richtungs-Wert (bearing) zu erhalten, muss die Differenz aus dem Richtung
 ### Navigationsfunktionalität
 Implementieren Sie an dieser Stelle die Navigationsfunktionalität der App, indem Sie dem `LocationManager` mitteilen, dass der `NavigationController` über Positionsupdates informiert werden wollen.
 In der Callback-Methode `onLocationChanged` erhalten Sie die neuen Locations. Wandeln Sie diese ebenfalls in ein `NavigationDetail` um und melden Sie dem `NavigationListener` die neuen Navigationsdaten. Teilen Sie ihm dann außerdem mit, dass ein Ortungssignal gefunden wurde.
-Über die `onStatusChanged`-Methode erfahren Sie von potentiellen Statusänderungen. Vergleichen Sie hier mit `LocationProvider.TEMPORARILY_UNAVAILABLE` und informieren Sie in diesem Fall den `NavigationListener` von einem Signalverlust.
+Mit den beiden Methoden `onProviderDisabled` und `onProviderEnabled` kann der Activity mitgeteilt werden, dass der Location-Dienst des Geräts deaktiviert wurde. 
 
 Um die Navigation zu stoppen, können Sie dem `LocationManager` einfach Bescheid geben, dass Sie keine Updates mehr erhalten wollen.
 
@@ -80,7 +80,7 @@ Vervollständigen Sie die vorgegebene Methode `getEstimatedDistanceForLocation` 
 
 ### Starten der Navigation
 Verwenden Sie Ihren `NavigationController` nun in der `NavigationActivity`. Registrieren Sie diese dafür zunächst als Listener.
-Anschließend können Sie die `Destination` festlegen. Diese erhalten Sie aus dem `JSON`-String, den Sie aus dem Intent auslesen und parsen können.
+Anschließend können Sie die `Destination` festlegen. Diese erhalten Sie aus dem `JSON`-String, den Sie aus dem Intent auslesen und parsen können. Den notwendigen Schlüssel für das Extra finden Sie in der `AppConfig`-Klasse
 
 Sobald das Ziel festgelegt wurde, können Sie die Navigation über den `NavigationController` starten.
 
