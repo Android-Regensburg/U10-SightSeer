@@ -85,7 +85,6 @@ Verwenden Sie Ihren `NavigationController` nun in der `NavigationActivity`. Regi
 Anschließend können Sie die `Destination` festlegen. Diese erhalten Sie aus dem `JSON`-String, den Sie aus dem Intent auslesen und parsen können. Den notwendigen Schlüssel für das Extra finden Sie in der `AppConfig`-Klasse
 
 Sobald das Ziel festgelegt wurde, können Sie die Navigation über den `NavigationController` starten.
-
 **Hinweis:** Wenn die App minimiert wird, sollten Sie die Navigation im Code manuell stoppen.
 
 ## Anhang
