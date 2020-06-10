@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/navigation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="@string/navigation_info_placeholder"/>
+
+    <ImageView
+        android:id="@+id/compass_view"
+        android:layout_width="@dimen/compass_size"
+        android:layout_height="@dimen/compass_size"
+        android:layout_centerInParent="true"
+        android:src="@drawable/compass_no_gps" />
+
+    <TextView
+        android:id="@+id/navigation_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/compass_view"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="@string/navigation_info_placeholder"/>
+
+    <TextView
+        android:id="@+id/navigation_signal_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/navigation_signal_info_searching"
+        android:textColor="@android:color/white"
+        android:background="@color/gps_red"
+        />
+
+</RelativeLayout>
