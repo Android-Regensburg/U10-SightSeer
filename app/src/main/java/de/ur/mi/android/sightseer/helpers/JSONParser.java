@@ -22,7 +22,7 @@ public class JSONParser {
         return destinations;
     }
 
-    private static Destination getDestination(JSONObject jsonObject) throws JSONException {
+    public static Destination getDestination(JSONObject jsonObject) throws JSONException {
         String title = jsonObject.getString(AppConfig.TITLE_KEY);
         double latitude = jsonObject.getDouble(AppConfig.LATITUDE_KEY);
         double longitude = jsonObject.getDouble(AppConfig.LONGITUDE_KEY);
