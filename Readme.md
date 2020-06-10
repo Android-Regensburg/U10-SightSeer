@@ -86,7 +86,7 @@ Anschließend können Sie die `Destination` festlegen. Diese erhalten Sie aus de
 
 Sobald das Ziel festgelegt wurde, können Sie die Navigation über den `NavigationController` starten.
 
-**Hinweis: ** Wenn die App minimiert wird, sollten Sie die Navigation im Code manuell stoppen.
+**Hinweis:** Wenn die App minimiert wird, sollten Sie die Navigation im Code manuell stoppen.
 
 ## Anhang
 ### Screenshots
