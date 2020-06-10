@@ -22,7 +22,7 @@ header-includes: |
       
 ---
 
-# U08 | Sightseer
+# U10 | Sightseer
 
 ![Cover für die zehnte Übungsaufgabe](./docs/cover.png)
 
