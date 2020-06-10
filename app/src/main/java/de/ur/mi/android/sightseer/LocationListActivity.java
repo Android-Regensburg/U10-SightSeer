@@ -58,7 +58,7 @@ public class LocationListActivity extends AppCompatActivity {
 
     private void initLocationData() {
         destinations.clear();
-        destinations.addAll(JSONParser.getPOIList(AppConfig.JSONString.JSON_STRING));
+        destinations.addAll(JSONParser.getDestinationList(AppConfig.JSONString.JSON_STRING));
         listAdapter.notifyDataSetChanged();
     }
 

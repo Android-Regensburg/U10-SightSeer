@@ -8,7 +8,8 @@ import de.ur.mi.android.sightseer.location.Destination;
 
 public class JSONParser {
 
-    public static ArrayList<Destination> getPOIList(String JSONArrayString) {
+    // Gibt eine Liste aus Destination-Objekten zurück, die aus einem JSONArrayString geparsed werden
+    public static ArrayList<Destination> getDestinationList(String JSONArrayString) {
         ArrayList<Destination> destinations = new ArrayList<Destination>();
         try {
             JSONArray jsonArray = new JSONArray(JSONArrayString);
@@ -22,6 +23,7 @@ public class JSONParser {
         return destinations;
     }
 
+    // Diese Methode kann verwendet werden um aus einem JSONObject eine Destination zu erzeugen
     public static Destination getDestination(JSONObject jsonObject) throws JSONException {
         String title = jsonObject.getString(AppConfig.TITLE_KEY);
         double latitude = jsonObject.getDouble(AppConfig.LATITUDE_KEY);
