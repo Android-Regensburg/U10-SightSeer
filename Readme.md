@@ -32,7 +32,7 @@ Das Ziel dieser Aufgabe ist die Implementierung einer App zur Navigation am Camp
 
 ## Hinweise
 
-* Zum Abfragen der notwendigen Permissions kann der Context verwendet werden. Tragen Sie diese auch im Manifest an der richtigen Stelle ein:
+* Zum Abfragen der notwendigen Permissions kann der Context verwendet werden. Tragen Sie diese auch im Manifest ein
   * `Permissions`: https://developer.android.com/training/permissions/requesting
 * Beschäftigen Sie sich in dieser Aufgabe der Einfachheit halber nicht damit, was passieren soll wenn der Nutzer die Berechtigung ablehnt
 * Verwenden Sie Für die Abfrage und Verarbeitung der Positionsdaten die Vorlesung (VL9), sowie die Android-Dokumentation:
