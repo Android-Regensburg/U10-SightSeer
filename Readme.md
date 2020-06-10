@@ -50,9 +50,7 @@ Das Ziel dieser Aufgabe ist die Implementierung einer App zur Navigation am Camp
 Stellen Sie sicher dass die App über die notwendigen Berechtigungen verfügt. SightSeer muss in der Lage sein die `FINE_LOCATION` des Geräts abzufragen. Anders als beim ebenfalls erforderlichen Internetzugriff handelt es sich dabei um eine sensitivere Permission. Diese muss zum Startzeitpunkt der Anwendung geprüft und angefragt werden.
 
 Starten Sie die App an dieser Stelle auf dem Emulator, um zu testen, ob das Popup für die Berechtigung, wie auf dem Screenshot sichtbar, korrekt angezeigt wird.
-
 **Hinweis:** Es wird empfohlen die Berechtigungen zusätzlich immer dann zu prüfen, wenn die entsprechende Funktion verwendet wird (auch im `NavigationController`). Dazu kann die `ActivityCompat`-Klasse verwendet werden. Prüfen Sie zusätzlich zur `FINE_LOCATION` auch die `COARSE_LOCATION`.
-
 
 ### Auslesen der aktuellen Position
 Kümmern Sie sich als nächstes darum, die Positionsdaten des Geräts auszulesen. Dafür benötigen Sie in der `NavigationController`-Klasse eine Instanzvariable vom Typ `LocationManager`.
