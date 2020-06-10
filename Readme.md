@@ -63,7 +63,7 @@ Hier verwenden wir folgende Eigenschaften:
 * Leistungsbedarf: `POWER_MEDIUM`
 * Ausrichtung erforderlich: `true`
 
-Mit diesem Provider kann nun die tatsächliche Position über den LocationManager ausgelesen werden.
+Mit diesem Provider kann nun die aktuelle Position über den LocationManager ausgelesen werden.
 
 ### Festlegen einer Ziellocation
 Sorgen Sie dafür, dass dem `NavigationController` eine Instanz von `Destination` übergeben werden kann. Aus dieser soll, abhängig von der aktuellen Position, ein `NavigationDetail`-Objekt erzeugt und über das `NavigationListener`-Interface an die entsprechende Activity übergeben werden.
