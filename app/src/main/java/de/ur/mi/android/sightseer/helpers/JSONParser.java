@@ -8,7 +8,7 @@ import de.ur.mi.android.sightseer.location.Destination;
 
 public class JSONParser {
 
-    public static ArrayList<Destination> getPOIList(String JSONArrayString) {
+    public static ArrayList<Destination> getDestinationList(String JSONArrayString) {
         ArrayList<Destination> destinations = new ArrayList<Destination>();
         try {
             JSONArray jsonArray = new JSONArray(JSONArrayString);
